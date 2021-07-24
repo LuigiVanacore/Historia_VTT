@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI_Prova.gd" type="Script" id=1]
+
+[node name="UI_Prova" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ChatDisplay" type="TextEdit" parent="."]
+anchor_left = 0.695313
+anchor_top = 0.106667
+anchor_right = 0.984375
+anchor_bottom = 0.746667
+readonly = true
+show_line_numbers = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="D6Button" type="Button" parent="."]
+anchor_left = 0.046875
+anchor_top = 0.8
+anchor_right = 0.226563
+anchor_bottom = 0.906667
+text = "Lancia D6"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="D20Button" type="Button" parent="."]
+anchor_left = 0.265625
+anchor_top = 0.786667
+anchor_right = 0.445313
+anchor_bottom = 0.906667
+text = "Lancia D20"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="button_down" from="D6Button" to="." method="_on_D6Button_button_down"]
+[connection signal="button_down" from="D20Button" to="." method="_on_D20Button_button_down"]
